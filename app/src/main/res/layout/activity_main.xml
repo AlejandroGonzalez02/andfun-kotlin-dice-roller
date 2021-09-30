@@ -15,12 +15,14 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:app="http://"
-    android:tools=""
-    android:layout_width="wrap_content"
+    android:app="http://schemas.android.com/apk/res-auto"
+    android:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    tools:context=".MainActivity"
     >
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
