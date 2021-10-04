@@ -18,6 +18,7 @@ package com.example.android.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -38,16 +39,24 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice(){
 
         // TODO (03) In rollDice get a Random int between 1 and 6
-
-        val randomInt = Random.nextInt(6)+1
-
         // TODO (04) In rollDice use findViewById to get a reference to the TextView
         // and assign it to an inmutable variable called resultText
-        val resultText: TextView = findViewById(R.id.result_text)
-
         // TODO (05) In rollDice set the random value that you got above as the
-        // text of the TextView
-        resultText.text = randomInt.toString()
+        //        // text of the TextView
+
+
+        val randomInt = Random.nextInt(6)+1
+        val draxableResource= when (randomInt){
+        1 -> R.drawable.Dado1
+        2 -> R.drawable.Dado2
+        3 -> R.drawable.Dado3
+        4 -> R.drawable.Dado4
+        5 -> R.drawable.Dado5
+        else -> R.drawable.Dado6
+        }
+
+        val diceimage: ImageView = findViewById(R.id.imaxes)
+        diceimage.setImageResource(draxableResource)
     }
 }
 
