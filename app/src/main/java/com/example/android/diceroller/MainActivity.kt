@@ -25,6 +25,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     // TODO (01) Extract the image view variable here. You will need to use lateinit
+    lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // TODO (02) Initialize the image view variable here
+
     }
 
     private fun rollDice() {
