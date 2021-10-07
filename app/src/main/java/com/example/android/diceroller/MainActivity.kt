@@ -24,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var diceImage: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,19 +33,14 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
             rollDice()
+
+            diceImage = findViewById(R.id.imaxes)
         }
     }
     private fun rollDice(){
 
-        // TODO (03) In rollDice get a Random int between 1 and 6
-        // TODO (04) In rollDice use findViewById to get a reference to the TextView
-        // and assign it to an inmutable variable called resultText
-        // TODO (05) In rollDice set the random value that you got above as the
-        //        // text of the TextView
-
-
         val randomInt = Random.nextInt(6)+1
-        val draxableResource= when (randomInt){
+        val drawableResource= when (randomInt){
         1 -> R.drawable.dado1
         2 -> R.drawable.dado2
         3 -> R.drawable.dado3
@@ -53,9 +48,7 @@ class MainActivity : AppCompatActivity() {
         5 -> R.drawable.dado5
         else -> R.drawable.dado6
         }
-
-        val diceimage: ImageView = findViewById(R.id.imaxes)
-        diceimage.setImageResource(draxableResource)
+        diceImage.setImageResource(drawableResource)
     }
 }
 
