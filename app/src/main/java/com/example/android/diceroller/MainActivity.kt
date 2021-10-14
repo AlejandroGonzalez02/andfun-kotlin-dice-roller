@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
-            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
             rollDice()
 
             diceImage = findViewById(R.id.imaxes)
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun rollDice(){
 
-        val randomInt = Random.nextInt(6)+1
+        val randomInt = java.util.Random().nextInt(6)+1
         val drawableResource= when (randomInt){
         1 -> R.drawable.dado1
         2 -> R.drawable.dado2
@@ -51,4 +50,6 @@ class MainActivity : AppCompatActivity() {
         diceImage.setImageResource(drawableResource)
     }
 }
+
+
 
