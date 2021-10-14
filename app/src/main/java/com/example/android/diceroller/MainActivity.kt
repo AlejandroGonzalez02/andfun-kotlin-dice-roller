@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
             rollDice()
-
+        }
             diceImage = findViewById(R.id.imaxes)
         }
-    }
+
     private fun rollDice(){
 
         val randomInt = java.util.Random().nextInt(6)+1
